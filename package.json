@@ -1,10 +1,12 @@
 {
-  "name": "wedding-invitation-for-programmers",
+  "name": "wedding-invitation",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "cloud:login": "cloudbase login",
+    "cloud:dist-front": "cloudbase hosting:deploy dist / -e elvinn-1aa07a",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -12,6 +14,7 @@
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "@cloudbase/cli": "^0.7.2",
     "@vue/cli-plugin-babel": "^3.1.0",
     "@vue/cli-plugin-eslint": "^3.1.0",
     "@vue/cli-service": "^3.1.0",

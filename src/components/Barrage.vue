@@ -19,15 +19,18 @@
 </template>
 
 <script>
-  import data from '../mock/data'
+  /*global tcb*/
+  import mockData from '../mock/data'
+  import { envId } from '../../cloudbaserc.json'
 
   export default {
     props: ['wish', 'canStart'],
-    data(){
+    data() {
       return {
-        barrages: data.barrages,
+        barrages: mockData.barrages,
         animationStyle:'',
-        initialOffset: 0
+        initialOffset: 0,
+        app: null, // 云开发实例
       }
     },
     computed: {
@@ -36,11 +39,17 @@
       }
     },
     watch: {
-      canStart: function (val) {
+      canStart(val) {
         if (val===true) {
           this.barrageAnimationStart()
         }
+      },
+      wish() {
+        this.setBarrage()
       }
+    },
+    mounted() {
+      this.checkTcbLoaded()
     },
     methods: {
       // 弹幕动画开始
@@ -82,7 +91,42 @@
             }
           })
         }
-      }
+      },
+      checkTcbLoaded() {
+        // tcb.js 异步加载加快速度，所以循环判断下是否加载成功
+        if (typeof tcb !== 'undefined') {
+          this.app = tcb.init({
+            env: envId,
+          });
+
+          this.app.auth().signInAnonymously().then(() => {
+            this.fetchBarrage()
+          })
+          return
+        }
+
+        setTimeout(this.checkTcbLoaded, 1000)
+      },
+      fetchBarrage() {
+        this.app.callFunction({
+          name: 'getBarrage'
+        }).then(({ result: { code, result = [] } = {} } = {}) => {
+          if (code) {
+            return
+          }
+          this.barrages.unshift(...result)
+        })
+      },
+      setBarrage() {
+        if (!this.app || !this.barrageCollection || !this.wish) {
+          return
+        }
+
+        this.app.callFunction({
+          name: 'addBarrage',
+          barrage: this.wish,
+        })
+      },
     }
   }
 </script>

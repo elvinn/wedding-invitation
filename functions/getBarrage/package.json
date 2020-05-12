@@ -1,0 +1,7 @@
+{
+  "name": "get-barrage",
+  "description": "获取祝福弹幕",
+  "dependencies": {
+    "@cloudbase/node-sdk": "^1.1.1"
+  }
+}
