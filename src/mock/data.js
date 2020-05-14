@@ -32,7 +32,7 @@ ${BOY}.say('WoW，已经${calDiffStr(DATE_MAP.CONFESSION_YES)}了！');
 
 // 希望不远的将来
 ${BOY}.say('嫁给我吧!❤️');
-${GIRL}.response('好呀，我愿意！');
+${GIRL}.response('Yes, I do！');
 
 (${BOY}, ${GIRL}).结婚('xxxx年xx月xx日')
 (${BOY}, ${GIRL}).发请帖('yyyy年yy月yy日');
