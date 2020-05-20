@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "cloud:login": "cloudbase login",
-    "cloud:dist-front": "cloudbase hosting:deploy dist /xinyi -e elvinn-1aa07a",
+    "cloud:dist-front": "cloudbase hosting:deploy dist / -e elvinn-1aa07a",
     "cloud:dist-funcs": "cloudbase functions:deploy addBarrage  -e elvinn-1aa07a && cloudbase functions:deploy getBarrage  -e elvinn-1aa07a",
     "lint": "vue-cli-service lint"
   },
