@@ -1,6 +1,6 @@
 # 程序员的婚礼邀请函
 
-源自 [仓库 - 程序猿的婚礼邀请函](https://github.com/leadream/wedding-invitation-for-programmers)
+源自 [仓库 - 程序猿的婚礼邀请函](https://github.com/leadream/wedding-invitation-for-programmers)，加上了腾讯云开发的能力进行祝福的存储和静态网站的存储，非常感谢 leadream 的创意。
 
 打开邀请函之后，会先模拟编写一段代码，编写完成之后会模拟执行，成功后则打开邀请函。在邀请函内可以填写祝福语并发送，发送成功后关闭邀请函，显示弹幕。
 
