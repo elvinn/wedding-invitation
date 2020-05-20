@@ -6,7 +6,7 @@
 
 ![](./invitation.jpg)
 
-在线体验：https://elvinn-1aa07a-1251269979.tcloudbaseapp.com/
+在线体验：https://elvinn-1aa07a-1251269979.tcloudbaseapp.com/xinyi
 
 ## 开发
 ### 前提条件
