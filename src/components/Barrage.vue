@@ -118,13 +118,15 @@
         })
       },
       setBarrage() {
-        if (!this.app || !this.barrageCollection || !this.wish) {
+        if (!this.app || !this.wish) {
           return
         }
 
         this.app.callFunction({
           name: 'addBarrage',
-          barrage: this.wish,
+          data: {
+            barrage: this.wish,
+          },
         })
       },
     }
