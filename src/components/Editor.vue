@@ -23,7 +23,6 @@
       </svg>
     </div>
     <Executions :canExecute="canExecute" @onUpdating="scrollToBottom" @onFinish="canOpen = true"/>
-    <invitation :canOpen="canOpen" @onClose="canOpen = false, hasClosed = true" @sendBarrage="onAfterSending"/>
     <Barrage :wish="wish" :canStart="canStart"/>
   </div>
 </template>
@@ -35,12 +34,11 @@
   import data from '../mock/data'
 
   import Executions from './Executions'
-  import Invitation from './Invitation'
   import Barrage from './Barrage'
 
   export default {
     name: 'Editor',
-    components: { Executions, Invitation, Barrage },
+    components: { Executions, Barrage },
     data() {
       return {
         startDate: '',

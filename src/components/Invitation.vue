@@ -7,8 +7,6 @@
             <img class="content-inside-photo" src="../images/photo.jpg">
             <p>我们在一起 {{ year }}啦！</p>
             <p><b>心一 🐱 & 🐷 佳伟</b></p>
-            <!-- <p>时间：invalid date value</p> -->
-            <!-- <p>地点：<b>location can not be found</b></p> -->
             <div class="content-inside-bless">
               <input
                 placeholder="写下你的祝福" 
