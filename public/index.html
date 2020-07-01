@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>爱情纪念</title>
+    <script>
+      var isProd = '<%= NODE_ENV %>' === 'production';
+      if (isProd && location.protocol === 'http:') {
+        location.protocol = "https:";
+      }
+    </script>
     <script src="https://cdn.bootcdn.net/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/moment.js/2.25.3/locale/zh-cn.min.js"></script>
     <script src="https://imgcache.qq.com/qcloud/tcbjs/1.6.1/tcb.js" defer></script>
