@@ -10,6 +10,7 @@
       let beiAnText = ''
       switch (location.host) {
         case 'husttic.com':
+        case 'www.husttic.com':
           beiAnText = '鄂ICP备15023442号-1'
           break;
         case 'elvinn.cn':
