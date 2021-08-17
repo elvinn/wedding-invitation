@@ -1,16 +1,19 @@
 <template>
   <div class="wedding">
-    <Editor/>
+    <Editor />
+    <BeiAn />
   </div>
 </template>
 
 <script>
   import Editor from "./components/Editor.vue"
+  import BeiAn from "./components/BeiAn.vue"
 
   export default {
     props: [],
     components: {
-      Editor
+      Editor,
+      BeiAn,
     },
     name: 'Wedding'
   }
