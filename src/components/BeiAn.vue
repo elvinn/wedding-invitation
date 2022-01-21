@@ -26,6 +26,7 @@
 
 <style scoped lang="less">
   .beian {
+    z-index: 100;
     position: fixed;
     bottom: 1em;
     width: 100%;
